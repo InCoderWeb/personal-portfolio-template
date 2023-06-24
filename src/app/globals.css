@@ -1,0 +1,517 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+::selection {
+  @apply bg-blue-600 text-white;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 0.3rem;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  @apply rounded-lg bg-blue-500 hover:bg-blue-600;
+}
+
+/* ----------------------- Header ----------------------- */
+
+.header {
+  @apply h-[4.5rem] flex top-[-75px] items-center px-4 justify-between max-w-[1440px] mx-auto;
+}
+
+.header.active {
+  -webkit-backdrop-filter: blur(5px);
+  backdrop-filter: blur(5px);
+  @apply fixed top-0 transition-all duration-300 left-0 w-screen bg-white/80 border-b-[.1rem] z-[9999];
+}
+
+.header .logo {
+  @apply pl-3;
+}
+
+.header nav {
+  background-color: transparent !important;
+}
+
+.header nav ul {
+  @apply flex;
+}
+
+.header nav ul li {
+  @apply mx-3 hover:text-blue-600 font-medium text-gray-600 focus:border-0 focus:outline-none transition-colors duration-300 relative;
+}
+
+.header nav ul li::after {
+  content: "";
+  @apply h-[.18rem] w-0 bg-blue-600 absolute left-0 bottom-[-.1rem] rounded-lg transition-all duration-300;
+}
+
+.header nav ul li:hover::after {
+  @apply w-full;
+}
+
+.header nav ul li a {
+  @apply focus:border-0 focus:outline-none focus:text-blue-600;
+}
+
+.btn {
+  @apply px-6 py-2 rounded-full focus:border-0 focus:outline-none
+  hover:shadow-lg transition-shadow duration-300;
+}
+
+.primaryBtn {
+  @apply bg-blue-600 text-white;
+}
+
+.header .btns {
+  @apply flex items-center;
+}
+
+.menuBtn {
+  @apply text-2xl text-gray-600 hover:text-gray-800 transition-colors
+   duration-300 mx-4 hidden;
+}
+
+/* ----------------------- Header End ----------------------- */
+
+/* ----------------------- Footer ----------------------- */
+
+footer {
+  @apply w-screen left-0 bg-blue-900 flex flex-col justify-center pt-5 text-center max-w-full;
+}
+
+footer h3 {
+  @apply text-2xl text-white font-medium;
+}
+
+footer p {
+  @apply text-gray-300 text-xs max-w-[33rem] mx-auto mt-2;
+}
+
+.socialIcons {
+  @apply flex justify-center my-4;
+}
+
+.socialIcons a {
+  @apply mx-2 w-10 text-xl rounded-full h-10 hover:bg-blue-700 hover:shadow-md transition-all duration-300 text-white flex justify-center items-center;
+}
+
+.creditSection {
+  @apply bg-blue-950 py-3 text-gray-300 text-sm;
+}
+
+.creditSection a {
+  @apply hover:text-white;
+}
+
+/* ----------------------- Footer End ----------------------- */
+
+/* ----------------------- homeSection ----------------------- */
+
+.homeSection {
+  @apply flex justify-between min-h-max items-center max-w-[1440px] mx-auto;
+}
+
+.homeSection .left {
+  @apply ml-10 w-full;
+}
+
+.homeSection .left > span {
+  @apply text-sm text-blue-600 font-medium;
+}
+
+.homeSection .left h3 {
+  @apply text-4xl font-bold text-blue-950 mb-2;
+}
+
+.homeSection .left h4 {
+  @apply font-medium text-gray-400 mb-2;
+}
+
+.homeSection .left h4 span {
+  @apply text-blue-950;
+}
+
+.homeSection .left p {
+  @apply max-w-[25rem] mb-6 text-sm text-gray-500 mt-2;
+}
+
+.actionsButtons button {
+  @apply mr-4;
+}
+
+.primaryBtnLite {
+  @apply bg-blue-500 text-white;
+}
+
+.primaryBtnDark {
+  @apply bg-blue-950 text-white;
+}
+
+.homeSection .right {
+  background-image: url(../../public/herobg.svg);
+  background-position-x: 16%;
+  background-position-y: 70%;
+  @apply overflow-hidden bg-no-repeat w-full flex justify-end;
+}
+
+/* ----------------------- homeSection End ----------------------- */
+
+/* ----------------------- Back To Top Btn ----------------------- */
+
+.backToTop {
+  @apply fixed bottom-3 opacity-0 pointer-events-none right-3 bg-blue-800 p-3 rounded-md text-white text-xl transition-opacity duration-500;
+}
+
+.backToTop.active {
+  @apply opacity-100 pointer-events-auto;
+}
+
+/* ----------------------- Back To Top Btn End ----------------------- */
+
+/* ----------------------- About me ----------------------- */
+
+.aboutSection {
+  @apply max-w-[1440px] mx-auto w-full overflow-hidden flex flex-col;
+}
+
+.aboutSection .title {
+  @apply text-center text-3xl text-blue-800 capitalize font-bold mt-28 mb-6;
+}
+
+.aboutSection .wrapper {
+  @apply flex justify-between mx-6;
+}
+
+.aboutSection .left {
+  @apply ml-10;
+}
+
+.aboutSection .left > h3 {
+  @apply text-lg font-bold text-blue-800;
+}
+
+.aboutSection .left .skills {
+  @apply mt-6;
+}
+
+.aboutSection .left .skills .progressWrapper {
+  @apply mb-4;
+}
+
+.aboutSection .left .skills .progressWrapper p {
+  @apply mb-4;
+}
+
+.aboutSection .left .skills .progress {
+  @apply w-[20rem] bg-blue-300 h-2 rounded-full;
+}
+
+.aboutSection .left .skills .progressBar {
+  width: 0;
+  @apply bg-blue-800 h-full rounded-full relative transition-all duration-500;
+}
+
+.aboutSection .left .skills .progressBar::before {
+  content: attr(data-percent);
+  @apply top-[-1.4rem] absolute right-0;
+}
+
+.aboutSection .right {
+  @apply w-full ml-[6rem];
+}
+
+.aboutSection .right .title {
+  margin-top: 0 !important;
+  @apply text-lg font-bold text-blue-800 text-left;
+}
+
+.aboutSection .right p {
+  @apply max-w-[25rem] text-sm text-gray-500;
+}
+
+.aboutSection hr {
+  @apply mb-3 w-[90%] mx-auto;
+}
+
+.aboutSection .right .socialLinks {
+  @apply flex mt-8;
+}
+
+.aboutSection .right .socialLinks .icon {
+  @apply mx-2 rounded-full p-2 border border-gray-500 text-gray-500 hover:text-white hover:bg-blue-700 hover:border-blue-700;
+}
+
+/* ----------------------- About me End ----------------------- */
+
+/* ----------------------- Services Section ----------------------- */
+
+.ServicesSection {
+  @apply mx-4 mb-8;
+}
+
+.topWrapper {
+  @apply text-center mt-16;
+}
+
+.topWrapper > p {
+  @apply text-sm text-blue-700 font-medium;
+}
+
+.topWrapper .title {
+  @apply text-4xl font-bold text-blue-900;
+}
+
+.topWrapper .desc {
+  @apply mt-4 text-sm text-gray-600 max-w-[30rem] mx-auto mb-12;
+}
+
+.ServicesSection .serviceCards {
+  @apply flex;
+}
+
+.ServicesSection .serviceCards .card {
+  @apply w-[14rem] mx-3 shadow-lg rounded-xl text-center flex justify-center items-center flex-col hover:bg-blue-500 transition-colors duration-300 px-2;
+}
+
+.ServicesSection .serviceCards .card:hover .icon {
+  @apply text-blue-500 bg-white;
+}
+
+.ServicesSection .serviceCards .card .icon {
+  @apply mt-5 p-4 bg-blue-500 text-3xl text-white rounded-full mb-4 transition-colors duration-300;
+}
+
+.ServicesSection .serviceCards .card .title {
+  @apply text-lg text-blue-950 font-bold hover:text-white;
+}
+
+.ServicesSection .serviceCards .card:hover .title {
+  @apply text-white;
+}
+
+.ServicesSection .serviceCards .card:hover p {
+  @apply text-gray-200;
+}
+
+.ServicesSection .serviceCards .card p {
+  @apply text-sm text-gray-600 mb-8 mt-4;
+}
+
+/* ----------------------- Services Section End ----------------------- */
+
+/* ----------------------- Projects Section ----------------------- */
+
+.projectsSection {
+  @apply px-4 mb-8 mt-[6rem] p-[1rem] bg-blue-50;
+}
+
+.projectsGallery {
+  @apply flex justify-center flex-col;
+}
+
+.projects {
+  @apply max-w-[39rem] flex justify-start flex-wrap mx-auto mt-6;
+}
+
+.projectCard {
+  @apply max-w-[18rem] mx-3 mb-8 shadow-md hover:shadow-xl rounded-xl transition-shadow duration-300 overflow-hidden;
+}
+
+.projectCard .title {
+  @apply px-3 text-lg text-blue-950 font-semibold mt-3;
+}
+
+.projectCard .desc {
+  @apply px-3 text-sm text-gray-400 mt-1 mb-4;
+}
+
+.postCard {
+  @apply max-w-[18rem] mx-3 mb-8 shadow-md hover:shadow-xl rounded-xl transition-shadow duration-300 overflow-hidden;
+}
+
+.postCard .title {
+  @apply px-3 text-lg text-blue-950 font-semibold mt-3;
+}
+
+.postCard .desc {
+  @apply px-3 text-sm text-gray-400 mt-1 mb-2;
+}
+
+.postCard .readMore {
+  @apply px-3 flex items-center mb-4 text-sm text-blue-400;
+}
+
+/* ----------------------- Projects Section End ----------------------- */
+
+/* ----------------------- Blogs Section ----------------------- */
+
+.blogsSection {
+  @apply mb-8 p-[1rem];
+}
+
+.blogsSection .blogPosts {
+  @apply flex flex-wrap justify-center
+}
+
+/* ----------------------- Blogs Section End ----------------------- */
+
+/* ----------------------- Contact Section ----------------------- */
+
+.contactSection{
+  @apply pt-6
+}
+
+.contactSection .contactForm{
+  @apply w-full flex justify-center flex-col items-center
+}
+
+.contactSection .contactForm input{
+  @apply bg-slate-100 mx-3 mb-4 p-1 h-[3rem] pl-6 w-[20rem] focus:border-0 focus:outline-none focus:border-b-2 border-blue-600
+}
+
+.contactSection .contactForm textarea{
+  @apply bg-slate-100 mx-3 mb-4 p-1 h-[8rem] pl-6 w-full max-w-[41.5rem] focus:border-0 focus:outline-none focus:border-b-2 border-blue-600
+}
+
+/* ----------------------- Contact Section End ----------------------- */
+
+@media (max-width: 370px) {
+  .header .btn {
+    font-size: 0.75rem !important;
+    width: max-content;
+    transform: scale(0.8);
+  }
+}
+
+@media (max-width: 656px) {
+  .postCard{
+    @apply max-w-[90%]
+  }
+
+  .postCard img{
+    @apply w-full
+  }
+
+  .projectCard {
+    @apply max-w-[90%]
+  }
+
+  .projectCard img{
+    @apply w-full
+  }
+
+  .projects {
+    @apply justify-center
+  }
+}
+
+@media (max-width: 435px) {
+  .header .btn {
+    @apply px-4 text-sm ml-4;
+  }
+  .header .logo {
+    @apply w-[9rem];
+  }
+}
+
+@media (max-width: 890px) {
+  .header nav {
+    background: aliceblue !important;
+    @apply h-screen w-screen fixed z-[9999] top-0 left-[-100%] backdrop-blur transition-all duration-300;
+  }
+
+  .header nav.active {
+    @apply left-0;
+  }
+
+  .header nav ul {
+    @apply flex-col items-center h-screen justify-center;
+  }
+
+  .header nav ul li {
+    @apply my-4 text-3xl;
+  }
+
+  .menuBtn {
+    @apply block z-[99999];
+  }
+
+  .homeSection {
+    @apply flex-wrap;
+  }
+
+  .homeSection .left {
+    @apply mt-12 mb-8 ml-6;
+  }
+
+  .homeSection .right {
+    background-position-x: 100%;
+    background-position-y: 66%;
+  }
+
+  .aboutSection .wrapper {
+    @apply flex-wrap items-center w-full mx-0;
+  }
+
+  .aboutSection .right {
+    @apply mx-3 mt-8 border-t;
+  }
+
+  .aboutSection .left {
+    @apply ml-0 w-full;
+  }
+
+  .aboutSection .left > h3 {
+    @apply text-center;
+  }
+
+  .aboutSection .left .skills .progressWrapper {
+    @apply mx-auto w-[80%];
+  }
+
+  .aboutSection .left .skills .progress {
+    @apply w-full;
+  }
+
+  .aboutSection .right .title {
+    margin-top: 2rem !important;
+    @apply text-center;
+  }
+
+  .aboutSection .right p {
+    @apply mx-auto text-center;
+  }
+
+  .aboutSection .right .socialLinks {
+    @apply text-center justify-center mb-6;
+  }
+
+  .ServicesSection .serviceCards {
+    @apply flex-wrap justify-center;
+  }
+
+  .ServicesSection .serviceCards .card {
+    @apply mb-8;
+  }
+}
+
+@media (max-width: 528px) {
+  .ServicesSection .serviceCards .card {
+    @apply w-full;
+  }
+}
+
+@media (max-width: 425px) {
+  .homeSection .right {
+    background-position-x: 28%;
+    background-position-y: 66%;
+  }
+}
