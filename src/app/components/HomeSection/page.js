@@ -1,6 +1,5 @@
 "use client";
 import React from "react";
-import Image from "next/image";
 
 const Page = () => {
   return (
@@ -10,11 +9,10 @@ const Page = () => {
           <span>Hey There 👋 I am</span>
           <h3>Praduman Tiwari</h3>
           <h4>
-            Professional <span>Graphic Designer</span>
+            Professional <span>Mern Stack Developer</span>
           </h4>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean
-            interdum consequat convallis.
+          Experienced MERN stack developer crafting seamless web solutions with expertise in JavaScript, React, Node.js, and MongoDB.
           </p>
           <div className="actionsButtons">
             <button
@@ -31,7 +29,7 @@ const Page = () => {
           </div>
         </div>
         <div className="right">
-          <Image src={"/heroImage.png"} width={400} height={400} />
+          <img src={"/heroImage.png"} width={400} height={400} />
         </div>
       </div>
     </>
