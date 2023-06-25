@@ -37,8 +37,8 @@ const Page = () => {
           </div>
         </div>
         <div className="serviceCards">
-          {cards.map((card) => (
-            <div className="card">
+          {cards.map((card, index) => (
+            <div className="card" key={index}>
               <div className="icon">{card.icon}</div>
               <div className="title">{card.title}</div>
               <p>{card.desc}</p>
