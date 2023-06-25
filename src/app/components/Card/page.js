@@ -2,7 +2,7 @@
 import Link from "next/link";
 import { FaAngleRight } from "react-icons/fa6";
 
-const page = ({ type }) => {
+const Page = ({ type }) => {
   if (type === "project") {
     return (
       <>
@@ -45,4 +45,4 @@ const page = ({ type }) => {
   }
 };
 
-export default page;
+export default Page;

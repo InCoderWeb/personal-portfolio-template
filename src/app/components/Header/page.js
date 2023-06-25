@@ -4,7 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { FaBars, FaXmark } from "react-icons/fa6";
 
-const page = () => {
+const Page = () => {
   const [menuToggle, setMenuToggle] = useState(false);
   const [menuClass, setMenuClass] = useState("");
 
@@ -147,4 +147,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default Page;

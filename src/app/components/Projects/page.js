@@ -2,7 +2,7 @@
 import React, { useState } from "react";
 import Card from '@/app/components/Card/page'
 
-const page = () => {
+const Page = () => {
   return (
     <>
       <div className="projectsSection">
@@ -27,4 +27,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default Page;

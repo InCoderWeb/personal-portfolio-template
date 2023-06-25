@@ -1,7 +1,7 @@
 import React from "react";
 import Card from "@/app/components/Card/page";
 
-const page = () => {
+const Page = () => {
   return (
     <>
       <div className="blogsSection">
@@ -26,4 +26,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default Page;

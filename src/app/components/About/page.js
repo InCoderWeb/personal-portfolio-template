@@ -3,7 +3,7 @@ import Link from "next/link";
 import React, { useEffect } from "react";
 import { FaFacebook, FaGithub, FaLinkedin, FaWhatsapp } from "react-icons/fa6";
 
-const page = () => {
+const Page = () => {
   const skillData = [
     {
       name: "HTML",
@@ -97,4 +97,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default Page;

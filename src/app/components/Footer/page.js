@@ -2,7 +2,7 @@ import React from "react";
 import Link from "next/link";
 import { FaFacebook, FaWhatsapp, FaGithub, FaLinkedin } from "react-icons/fa6";
 
-const page = () => {
+const Page = () => {
   const socialIcons = [
     {
       icon: <FaFacebook />,
@@ -44,4 +44,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default Page;
