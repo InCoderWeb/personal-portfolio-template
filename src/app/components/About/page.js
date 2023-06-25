@@ -61,8 +61,8 @@ const Page = () => {
             <h3>My Skills & Tools</h3>
 
             <div className="skills">
-              {skillData.map((skill) => (
-                <div className="progressWrapper">
+              {skillData.map((skill, index) => (
+                <div className="progressWrapper" key={index}>
                   <p>{skill.name}</p>
                   <div className="progress">
                     <div
@@ -83,8 +83,8 @@ const Page = () => {
               nihil veritatis aut fuga atque, facilis molestiae.
             </p>
             <div className="socialLinks">
-              {socialIcons.map((socialIcon) => (
-                <Link className="icon" href={socialIcon.href}>
+              {socialIcons.map((socialIcon, index) => (
+                <Link className="icon" key={index} href={socialIcon.href}>
                   {socialIcon.icon}
                 </Link>
               ))}
