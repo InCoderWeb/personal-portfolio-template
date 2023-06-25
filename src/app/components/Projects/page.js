@@ -20,6 +20,8 @@ const Page = () => {
                 <Card type={"project"} />
                 <Card type={"project"} />
                 <Card type={"project"} />
+                <Card type={"project"} />
+                <Card type={"project"} />
             </div>
         </div>
       </div>

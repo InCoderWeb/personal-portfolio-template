@@ -6,20 +6,28 @@ import { FaFacebook, FaGithub, FaLinkedin, FaWhatsapp } from "react-icons/fa6";
 const Page = () => {
   const skillData = [
     {
-      name: "HTML",
+      name: "JavaScript",
       percent: "80%",
     },
     {
-      name: "CSS",
+      name: "React.JS",
+      percent: "75%",
+    },
+    {
+      name: "NODE.JS",
+      percent: "70%",
+    },
+    {
+      name: "PHP",
       percent: "90%",
     },
     {
-      name: "JavaScript",
-      percent: "50.5%",
+      name: "Mongo DB",
+      percent: "70%",
     },
     {
-      name: "React",
-      percent: "20%",
+      name: "NEXT.JS",
+      percent: "80%",
     },
   ];
 
@@ -77,10 +85,9 @@ const Page = () => {
           <div className="right">
             <div className="title">Connect With Me</div>
             <p>
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Hic
-              reiciendis quisquam, consequuntur quod cumque harum. Veniam et
-              explicabo facere accusantium, necessitatibus tempora architecto
-              nihil veritatis aut fuga atque, facilis molestiae.
+            Feel free to reach out to me for collaborations, job opportunities, or any inquiries. You can connect with me via email at <Link href="mailto:pradumantiwary2014@gmail.com">pradumantiwary2014@gmail.com</Link>, where I'll be happy to discuss your project or answer any questions you may have.<br/><br/>
+
+            Additionally, you can follow me on social media to stay updated with my latest projects, articles, and insights. Find me on [insert social media platforms] using the handle [your handle] for more engaging discussions and to explore my work further. I look forward to connecting with you!
             </p>
             <div className="socialLinks">
               {socialIcons.map((socialIcon, index) => (

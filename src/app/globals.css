@@ -187,7 +187,7 @@ footer p {
 }
 
 .aboutSection .wrapper {
-  @apply flex justify-between mx-6;
+  @apply flex justify-center mx-6;
 }
 
 .aboutSection .left {
@@ -225,7 +225,7 @@ footer p {
 }
 
 .aboutSection .right {
-  @apply w-full ml-[6rem];
+  @apply ml-[6rem];
 }
 
 .aboutSection .right .title {
@@ -274,7 +274,7 @@ footer p {
 }
 
 .ServicesSection .serviceCards {
-  @apply flex;
+  @apply flex justify-center;
 }
 
 .ServicesSection .serviceCards .card {
@@ -318,7 +318,7 @@ footer p {
 }
 
 .projects {
-  @apply max-w-[39rem] flex justify-start flex-wrap mx-auto mt-6;
+  @apply flex justify-start flex-wrap mx-auto mt-6;
 }
 
 .projectCard {
