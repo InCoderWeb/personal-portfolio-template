@@ -101,8 +101,8 @@ const Page = () => {
                       href="javascript:void(0)"
                       onClick={() => {
                         window.innerWidth <= 890
-                          ? window.scrollTo(0, 2000)
-                          : window.scrollTo(0, 1260);
+                          ? window.scrollTo(0, 2220)
+                          : window.scrollTo(0, 1440);
                         toggleMenu();
                       }}
                     >
@@ -113,8 +113,8 @@ const Page = () => {
                       href="javascript:void(0)"
                       onClick={() => {
                         window.innerWidth <= 890
-                          ? window.scrollTo(0, 3250)
-                          : window.scrollTo(0, 2200);
+                          ? window.scrollTo(0, 3480)
+                          : window.scrollTo(0, 2390);
                         toggleMenu();
                       }}
                     >
@@ -125,8 +125,8 @@ const Page = () => {
                       href="javascript:void(0)"
                       onClick={() => {
                         window.innerWidth <= 890
-                          ? window.scrollTo(0, 4280)
-                          : window.scrollTo(0, 2890);
+                          ? window.scrollTo(0, 4520)
+                          : window.scrollTo(0, 3080);
                         toggleMenu();
                       }}
                     >

@@ -228,11 +228,11 @@ footer p {
 }
 
 .keySkills{
-  @apply flex flex-wrap my-4
+  @apply flex flex-wrap my-4 max-w-[20rem]
 }
 
 .keySkills .chip{
-  @apply mx-2
+  @apply mx-[0.1rem] border px-3 py-1 rounded-full text-xs hover:cursor-pointer hover:bg-blue-600 hover:text-white mb-1 hover:border-blue-600 transition-colors
 }
 
 .aboutSection .right {
@@ -521,6 +521,10 @@ footer p {
 
   .ServicesSection .serviceCards .card {
     @apply mb-8;
+  }
+
+  .keySkills{
+    @apply mx-auto max-w-[90%]
   }
 }
 

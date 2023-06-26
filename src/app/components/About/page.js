@@ -36,6 +36,30 @@ const skillData = [
   },
 ];
 
+const keySkils = [
+  "MongoDB",
+  "FFmpeg",
+  "PHP",
+  "Codeigniter",
+  "JQuery",
+  "Ajax",
+  "Javascript",
+  "Web Services",
+  "API",
+  "JSON",
+  "CURL",
+  "Facrbook API",
+  "Cron",
+  "Zapier Integration",
+  "Rest API",
+  "Node.JS",
+  "Express",
+  "React.JS",
+  "AJAX",
+  "HTML",
+  "Next.JS",
+]
+
 const Page = () => {
   const socialIcons = [
     {
@@ -91,19 +115,13 @@ const Page = () => {
                 </div>
               ))}
             </div>
-            <h3 className="mt-8">Here are some of my tools:</h3>
-            <div className="keySkills">
-              <div className="chip">HTML</div>
-              <div className="chip">CSS</div>
-              <div className="chip">React.JS</div>
-            </div>
           </div>
           <div className="right">
             <div className="title">Connect With Me</div>
             <p>
               Feel free to reach out to me for collaborations, job
               opportunities, or any inquiries. You can connect with me via email
-              at{" "}
+              at 
               <Link href="mailto:pradumantiwari@outlook.com">
                 pradumantiwari@outlook.com
               </Link>
@@ -115,7 +133,13 @@ const Page = () => {
               with my latest projects, articles, and insights. Find me on social
               media platforms for more engaging discussions and to explore my
               work further. I look forward to connecting with you!
-            </p>
+            </p><br/>
+            <h3 className="title">Here are some of my tools:</h3>
+            <div className="keySkills">
+              {keySkils.map((skill, index) => (
+                <div className="chip" key={index}>{skill}</div>
+              ))}
+            </div>
             <div className="socialLinks">
               {socialIcons.map((socialIcon, index) => (
                 <Link
@@ -127,7 +151,7 @@ const Page = () => {
                   {socialIcon.icon}
                 </Link>
               ))}
-            </div>
+            </div><br/>
           </div>
         </div>
         <hr />
