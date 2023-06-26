@@ -23,13 +23,17 @@ html {
 /* ----------------------- Header ----------------------- */
 
 .header {
-  @apply h-[4.5rem] flex top-[-75px] items-center px-4 justify-between max-w-[1440px] mx-auto;
+  @apply h-[4.5rem] flex top-[-75px] items-center px-4 justify-between mx-auto;
+}
+
+.header .wrapper {
+  @apply max-w-[1440px] flex items-center justify-between w-full mx-auto
 }
 
 .header.active {
   -webkit-backdrop-filter: blur(5px);
   backdrop-filter: blur(5px);
-  @apply fixed top-0 transition-all duration-300 left-0 w-screen bg-white/80 border-b-[.1rem] z-[9999];
+  @apply fixed top-0 transition-all duration-300 left-0 w-full bg-white/80 border-b-[.1rem] z-[9999];
 }
 
 .header .logo {
@@ -116,7 +120,7 @@ footer p {
 /* ----------------------- homeSection ----------------------- */
 
 .homeSection {
-  @apply flex justify-between min-h-max items-center max-w-[1440px] mx-auto;
+  @apply flex justify-between min-h-max items-center max-w-[1475px] mx-auto;
 }
 
 .homeSection .left {
@@ -157,9 +161,8 @@ footer p {
 
 .homeSection .right {
   background-image: url(../../public/herobg.svg);
-  background-position-x: 16%;
-  background-position-y: 70%;
-  @apply overflow-hidden bg-no-repeat w-full flex justify-end;
+  background-position: right;
+  @apply overflow-hidden bg-no-repeat w-[200%] flex justify-end;
 }
 
 /* ----------------------- homeSection End ----------------------- */
@@ -191,15 +194,15 @@ footer p {
 }
 
 .aboutSection .left {
-  @apply ml-10;
+  @apply ml-10 w-[50%];
 }
 
-.aboutSection .left > h3 {
+.aboutSection .left h3 {
   @apply text-lg font-bold text-blue-800;
 }
 
 .aboutSection .left .skills {
-  @apply mt-6;
+  @apply mt-6 w-full;
 }
 
 .aboutSection .left .skills .progressWrapper {
@@ -211,7 +214,7 @@ footer p {
 }
 
 .aboutSection .left .skills .progress {
-  @apply w-[20rem] bg-blue-300 h-2 rounded-full;
+  @apply w-full bg-blue-300 h-2 rounded-full;
 }
 
 .aboutSection .left .skills .progressBar {
@@ -222,6 +225,14 @@ footer p {
 .aboutSection .left .skills .progressBar::before {
   content: attr(data-percent);
   @apply top-[-1.4rem] absolute right-0;
+}
+
+.keySkills{
+  @apply flex flex-wrap my-4
+}
+
+.keySkills .chip{
+  @apply mx-2
 }
 
 .aboutSection .right {
@@ -318,7 +329,7 @@ footer p {
 }
 
 .projects {
-  @apply flex justify-start flex-wrap mx-auto mt-6;
+  @apply flex justify-center flex-wrap mx-auto mt-6 max-w-[1475px];
 }
 
 .projectCard {
@@ -366,7 +377,7 @@ footer p {
 /* ----------------------- Contact Section ----------------------- */
 
 .contactSection{
-  @apply pt-6
+  @apply pt-6 px-4
 }
 
 .contactSection .contactForm{
@@ -378,7 +389,7 @@ footer p {
 }
 
 .contactSection .contactForm textarea{
-  @apply bg-slate-100 mx-3 mb-4 p-1 h-[8rem] pl-6 w-full max-w-[41.5rem] focus:border-0 focus:outline-none focus:border-b-2 border-blue-600
+  @apply bg-slate-100 mx-auto mb-4 p-1 h-[8rem] pl-6 w-full max-w-[41.5rem] focus:border-0 focus:outline-none focus:border-b-2 border-blue-600
 }
 
 /* ----------------------- Contact Section End ----------------------- */
@@ -410,6 +421,16 @@ footer p {
 
   .projects {
     @apply justify-center
+  }
+}
+
+@media (max-width: 720px) {
+  .contactSection .contactForm input{
+    @apply w-full mx-0
+  }
+  
+  .contactSection .contactForm textarea{
+    @apply w-full mx-auto
   }
 }
 
@@ -469,7 +490,7 @@ footer p {
     @apply ml-0 w-full;
   }
 
-  .aboutSection .left > h3 {
+  .aboutSection .left h3 {
     @apply text-center;
   }
 

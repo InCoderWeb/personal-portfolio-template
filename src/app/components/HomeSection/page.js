@@ -9,7 +9,7 @@ const Page = () => {
           <span>Hey There 👋 I am</span>
           <h3>Praduman Tiwari</h3>
           <h4>
-            Professional <span>Mern Stack Developer</span>
+            Professional <span>MERN Stack/PHP Developer</span>
           </h4>
           <p>
           Experienced MERN stack developer crafting seamless web solutions with expertise in JavaScript, React, Node.js, and MongoDB.

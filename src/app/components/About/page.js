@@ -1,52 +1,62 @@
 "use client";
 import Link from "next/link";
 import React, { useEffect } from "react";
-import { FaFacebook, FaGithub, FaLinkedin, FaWhatsapp } from "react-icons/fa6";
+import {
+  FaFacebook,
+  FaGithub,
+  FaLinkedin,
+  FaTwitter,
+  FaWhatsapp,
+} from "react-icons/fa6";
+
+const skillData = [
+  {
+    name: "JavaScript",
+    percent: "80%",
+  },
+  {
+    name: "React.JS",
+    percent: "75%",
+  },
+  {
+    name: "NODE.JS",
+    percent: "70%",
+  },
+  {
+    name: "PHP",
+    percent: "90%",
+  },
+  {
+    name: "Mongo DB",
+    percent: "70%",
+  },
+  {
+    name: "NEXT.JS",
+    percent: "80%",
+  },
+];
 
 const Page = () => {
-  const skillData = [
-    {
-      name: "JavaScript",
-      percent: "80%",
-    },
-    {
-      name: "React.JS",
-      percent: "75%",
-    },
-    {
-      name: "NODE.JS",
-      percent: "70%",
-    },
-    {
-      name: "PHP",
-      percent: "90%",
-    },
-    {
-      name: "Mongo DB",
-      percent: "70%",
-    },
-    {
-      name: "NEXT.JS",
-      percent: "80%",
-    },
-  ];
-
   const socialIcons = [
     {
       icon: <FaFacebook />,
-      href: "https://www.facebook.com/incoderweb",
+      href: "https://www.facebook.com/praduman.k.tiwari",
     },
     {
       icon: <FaWhatsapp />,
-      href: "https://www.facebook.com/incoderweb",
+      href: "https://wa.me/+917828132331",
     },
     {
       icon: <FaGithub />,
-      href: "https://www.github.com/incoderweb",
+      href: "https://github.com/pradumandev",
     },
     {
       icon: <FaLinkedin />,
-      href: "https://www.linkedin.com/in/incoderweb",
+      href: "https://www.linkedin.com/in/praduman-tiwari-49910a174/",
+    },
+    {
+      icon: <FaTwitter />,
+      href: "https://twitter.com/praduman1992",
     },
   ];
 
@@ -81,24 +91,46 @@ const Page = () => {
                 </div>
               ))}
             </div>
+            <h3 className="mt-8">Here are some of my tools:</h3>
+            <div className="keySkills">
+              <div className="chip">HTML</div>
+              <div className="chip">CSS</div>
+              <div className="chip">React.JS</div>
+            </div>
           </div>
           <div className="right">
             <div className="title">Connect With Me</div>
             <p>
-            Feel free to reach out to me for collaborations, job opportunities, or any inquiries. You can connect with me via email at <Link href="mailto:pradumantiwary2014@gmail.com">pradumantiwary2014@gmail.com</Link>, where I'll be happy to discuss your project or answer any questions you may have.<br/><br/>
-
-            Additionally, you can follow me on social media to stay updated with my latest projects, articles, and insights. Find me on [insert social media platforms] using the handle [your handle] for more engaging discussions and to explore my work further. I look forward to connecting with you!
+              Feel free to reach out to me for collaborations, job
+              opportunities, or any inquiries. You can connect with me via email
+              at{" "}
+              <Link href="mailto:pradumantiwari@outlook.com">
+                pradumantiwari@outlook.com
+              </Link>
+              , where I will be happy to discuss your project or answer any
+              questions you may have.
+              <br />
+              <br />
+              Additionally, you can follow me on social media to stay updated
+              with my latest projects, articles, and insights. Find me on social
+              media platforms for more engaging discussions and to explore my
+              work further. I look forward to connecting with you!
             </p>
             <div className="socialLinks">
               {socialIcons.map((socialIcon, index) => (
-                <Link className="icon" key={index} href={socialIcon.href}>
+                <Link
+                  className="icon"
+                  target="_blank"
+                  key={index}
+                  href={socialIcon.href}
+                >
                   {socialIcon.icon}
                 </Link>
               ))}
             </div>
           </div>
         </div>
-          <hr />
+        <hr />
       </div>
     </>
   );

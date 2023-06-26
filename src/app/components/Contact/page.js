@@ -13,16 +13,18 @@ const Page = () => {
           </div>
         </div>
         <div className="contactForm">
-            <div className="inputFields">
-                <input type="text" placeholder="Enter Your Name" />
-                <input type="text" placeholder="Company (Optional)" />
-            </div>
-            <div className="inputFields">
-                <input type="email" placeholder="Enter Your Email" />
-                <input type="tel" placeholder="Phone Number" />
-            </div>
+          <div className="inputFields">
+            <input type="text" placeholder="Enter Your Name" />
+            <input type="text" placeholder="Company (Optional)" />
+          </div>
+          <div className="inputFields">
+            <input type="email" placeholder="Enter Your Email" />
+            <input type="tel" placeholder="Phone Number" />
+          </div>
+          <div className="inputFields w-full flex">
             <textarea placeholder="Enter Your Message"></textarea>
-            <button className="btn primaryBtn mb-24">Contact Me</button>
+          </div>
+          <button className="btn primaryBtn mb-24">Contact Me</button>
         </div>
       </div>
     </>
