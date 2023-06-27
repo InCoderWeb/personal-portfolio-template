@@ -5,7 +5,7 @@ import Card from '@/app/components/Card/page'
 const Page = () => {
   return (
     <>
-      <div className="projectsSection">
+      <div className="projectsSection" id="projects">
         <div className="topWrapper">
           <p>Check out some of</p>
           <h3 className="title">My Recent Projects</h3>

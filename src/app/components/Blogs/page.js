@@ -1,10 +1,11 @@
 import React from "react";
 import Card from "@/app/components/Card/page";
+import Link from "next/link";
 
 const Page = () => {
   return (
     <>
-      <div className="blogsSection">
+      <div className="blogsSection" id="blogs">
         <div className="topWrapper">
           <p>Recent Posts</p>
           <h3 className="title">From The Blog</h3>
@@ -19,7 +20,7 @@ const Page = () => {
           <Card type={"post"} />
         </div>
         <div className="action flex w-full justify-center">
-          <button className="btn primaryBtn">Load More</button>
+          <Link href="/blogs#"><button className="btn primaryBtn">Read More</button></Link>
         </div>
       </div>
     </>

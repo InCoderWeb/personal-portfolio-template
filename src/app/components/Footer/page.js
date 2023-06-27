@@ -22,7 +22,7 @@ const Page = () => {
     },
   ];
   return (
-    <footer>
+    <footer className="mt-auto">
       <h3>Praduman Tiwari</h3>
       <p>
         Lorem ipsum dolor, sit amet consectetur adipisicing elit. Architecto

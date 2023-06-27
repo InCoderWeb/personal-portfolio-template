@@ -1,6 +1,5 @@
 "use client";
 import React, { useState, useEffect } from "react";
-import Image from "next/image";
 import Link from "next/link";
 import { FaBars, FaXmark } from "react-icons/fa6";
 
@@ -55,7 +54,7 @@ const Page = () => {
         <div className="wrapper">
           <div className="logo">
             <Link href="/">
-              <Image src={"/logo.svg"} width={160} height={160} />
+              <img src={"/logo.svg"} width={160} height={160} />
             </Link>
           </div>
           <nav className={menuClass}>
@@ -64,7 +63,7 @@ const Page = () => {
                 <li key={link.name}>
                   {link.name === "Home" ? (
                     <Link
-                      href="javascript:void(0)"
+                      href="/"
                       onClick={() => {
                         window.scrollTo(0, 0);
                         toggleMenu();
@@ -74,7 +73,7 @@ const Page = () => {
                     </Link>
                   ) : link.name === "About" ? (
                     <Link
-                      href="javascript:void(0)"
+                      href="/#about"
                       onClick={() => {
                         window.innerWidth <= 890
                           ? window.scrollTo(0, 875)
@@ -86,7 +85,7 @@ const Page = () => {
                     </Link>
                   ) : link.name === "Services" ? (
                     <Link
-                      href="javascript:void(0)"
+                      href="/#services"
                       onClick={() => {
                         window.innerWidth <= 890
                           ? window.scrollTo(0, 1610)
@@ -98,7 +97,7 @@ const Page = () => {
                     </Link>
                   ) : link.name === "Projects" ? (
                     <Link
-                      href="javascript:void(0)"
+                      href="/#projects"
                       onClick={() => {
                         window.innerWidth <= 890
                           ? window.scrollTo(0, 2220)
@@ -110,7 +109,7 @@ const Page = () => {
                     </Link>
                   ) : link.name === "Blog" ? (
                     <Link
-                      href="javascript:void(0)"
+                      href="/#blogs"
                       onClick={() => {
                         window.innerWidth <= 890
                           ? window.scrollTo(0, 3480)
@@ -122,7 +121,7 @@ const Page = () => {
                     </Link>
                   ) : (
                     <Link
-                      href="javascript:void(0)"
+                      href="/#contact"
                       onClick={() => {
                         window.innerWidth <= 890
                           ? window.scrollTo(0, 4520)

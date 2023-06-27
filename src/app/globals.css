@@ -10,6 +10,10 @@ html {
   scroll-behavior: smooth;
 }
 
+body{
+  @apply bg-blue-50
+}
+
 /* width */
 ::-webkit-scrollbar {
   width: 0.3rem;
@@ -23,11 +27,11 @@ html {
 /* ----------------------- Header ----------------------- */
 
 .header {
-  @apply h-[4.5rem] flex top-[-75px] items-center px-4 justify-between mx-auto;
+  @apply h-[4.5rem] w-full flex top-[-75px] items-center px-4 justify-between mx-auto;
 }
 
 .header .wrapper {
-  @apply max-w-[1440px] flex items-center justify-between w-full mx-auto
+  @apply max-w-[1440px] flex items-center justify-between w-full mx-auto;
 }
 
 .header.active {
@@ -120,7 +124,7 @@ footer p {
 /* ----------------------- homeSection ----------------------- */
 
 .homeSection {
-  @apply flex justify-between min-h-max items-center max-w-[1475px] mx-auto;
+  @apply flex justify-between w-full min-h-max items-center max-w-[1475px] mx-auto;
 }
 
 .homeSection .left {
@@ -227,12 +231,12 @@ footer p {
   @apply top-[-1.4rem] absolute right-0;
 }
 
-.keySkills{
-  @apply flex flex-wrap my-4 max-w-[20rem]
+.keySkills {
+  @apply flex flex-wrap my-4 max-w-[20rem];
 }
 
-.keySkills .chip{
-  @apply mx-[0.1rem] border px-3 py-1 rounded-full text-xs hover:cursor-pointer hover:bg-blue-600 hover:text-white mb-1 hover:border-blue-600 transition-colors
+.keySkills .chip {
+  @apply mx-[0.1rem] border border-slate-300 px-3 py-1 rounded-full text-xs hover:cursor-pointer hover:bg-blue-600 hover:text-white mb-1 hover:border-blue-600 transition-colors;
 }
 
 .aboutSection .right {
@@ -369,30 +373,98 @@ footer p {
 }
 
 .blogsSection .blogPosts {
-  @apply flex flex-wrap justify-center
+  @apply flex flex-wrap justify-center;
 }
 
 /* ----------------------- Blogs Section End ----------------------- */
 
 /* ----------------------- Contact Section ----------------------- */
 
-.contactSection{
-  @apply pt-6 px-4
+.contactSection {
+  @apply pt-6 px-4;
 }
 
-.contactSection .contactForm{
-  @apply w-full flex justify-center flex-col items-center
+.contactSection .contactForm {
+  @apply w-full flex justify-center flex-col items-center;
 }
 
-.contactSection .contactForm input{
-  @apply bg-slate-100 mx-3 mb-4 p-1 h-[3rem] pl-6 w-[20rem] focus:border-0 focus:outline-none focus:border-b-2 border-blue-600
+.contactSection .contactForm input {
+  @apply bg-slate-200 rounded mx-3 mb-4 p-1 h-[3rem] pl-6 w-[20rem] focus:border-0 focus:outline-none focus:border-b-2 border-blue-600;
 }
 
-.contactSection .contactForm textarea{
-  @apply bg-slate-100 mx-auto mb-4 p-1 h-[8rem] pl-6 w-full max-w-[41.5rem] focus:border-0 focus:outline-none focus:border-b-2 border-blue-600
+.contactSection .contactForm textarea {
+  @apply bg-slate-200 rounded mx-auto mb-4 p-1 h-[8rem] pl-6 w-full max-w-[41.5rem] focus:border-0 focus:outline-none focus:border-b-2 border-blue-600;
 }
 
 /* ----------------------- Contact Section End ----------------------- */
+
+/* ----------------------- Blogs Page ----------------------- */
+
+.allBlogsSection {
+  @apply w-full max-w-[1440px] mx-auto mb-8;
+}
+
+.searchBoxWrapper {
+  @apply w-[90%] mx-auto my-8;
+}
+
+.searchBoxWrapper .searchBox {
+  @apply w-full h-12 border-[2px] rounded-full px-5 flex items-center;
+}
+
+.searchBoxWrapper.active .searchBox {
+  @apply border-blue-600;
+}
+
+.searchBoxWrapper.active .searchBox svg {
+  @apply text-blue-600;
+}
+
+.searchBoxWrapper .searchBox svg {
+  @apply text-gray-400;
+}
+
+.searchBoxWrapper .searchBox input {
+  @apply w-full focus:outline-none ml-3 h-full bg-transparent;
+}
+
+.postsSection {
+  @apply mx-auto flex;
+}
+
+.postsSection .filterSidebar {
+  @apply bg-blue-100 w-[22rem] overflow-hidden ml-20 h-min mt-4 rounded-lg py-4 sticky top-[5.5rem];
+}
+
+.postsSection .filterSidebar .title {
+  @apply text-lg font-medium tracking-wide px-4;
+}
+
+.postsSection .filterSidebar .filters {
+  @apply mt-2;
+}
+
+.postsSection .filterSidebar .filters .filter {
+  @apply flex justify-between my-1 text-sm py-[.3rem] px-4 hover:bg-blue-600 hover:text-white transition-all duration-300;
+}
+
+.postsSection .posts {
+  @apply flex flex-wrap mx-auto justify-center;
+}
+
+/* ----------------------- Blogs Page End ----------------------- */
+
+/* ----------------------- Post Page ----------------------- */
+
+.postSection {
+  @apply  w-full max-w-[1400px] mx-auto;
+}
+
+.postSection .title {
+  @apply text-4xl font-semibold ml-6 text-gray-600
+}
+
+/* ----------------------- Post Page End ----------------------- */
 
 @media (max-width: 370px) {
   .header .btn {
@@ -403,34 +475,34 @@ footer p {
 }
 
 @media (max-width: 656px) {
-  .postCard{
-    @apply max-w-[90%]
+  .postCard {
+    @apply max-w-[90%];
   }
 
-  .postCard img{
-    @apply w-full
+  .postCard img {
+    @apply w-full;
   }
 
   .projectCard {
-    @apply max-w-[90%]
+    @apply max-w-[90%];
   }
 
-  .projectCard img{
-    @apply w-full
+  .projectCard img {
+    @apply w-full;
   }
 
   .projects {
-    @apply justify-center
+    @apply justify-center;
   }
 }
 
 @media (max-width: 720px) {
-  .contactSection .contactForm input{
-    @apply w-full mx-0
+  .contactSection .contactForm input {
+    @apply w-full mx-0;
   }
-  
-  .contactSection .contactForm textarea{
-    @apply w-full mx-auto
+
+  .contactSection .contactForm textarea {
+    @apply w-full mx-auto;
   }
 }
 
@@ -523,8 +595,8 @@ footer p {
     @apply mb-8;
   }
 
-  .keySkills{
-    @apply mx-auto max-w-[90%]
+  .keySkills {
+    @apply mx-auto max-w-[90%];
   }
 }
 

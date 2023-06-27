@@ -27,7 +27,7 @@ const Page = () => {
 
   return (
     <>
-      <div className="ServicesSection">
+      <div className="ServicesSection" id="services">
         <div className="topWrapper">
           <p>What I Offer?</p>
           <h3 className="title">My Services</h3>

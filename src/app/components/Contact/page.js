@@ -3,7 +3,7 @@ import React from "react";
 const Page = () => {
   return (
     <>
-      <div className="contactSection">
+      <div className="contactSection" id="contact">
         <div className="topWrapper">
           <p>Contact With Me</p>
           <h3 className="title">Have an Project in Mind?</h3>

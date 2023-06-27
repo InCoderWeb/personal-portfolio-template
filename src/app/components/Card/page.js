@@ -2,7 +2,8 @@
 import Link from "next/link";
 import { FaAngleRight } from "react-icons/fa6";
 
-const Page = ({ type }) => {
+const Page = ({ type, className, postURL }) => {
+  console.log(postURL);
   if (type === "project") {
     return (
       <>
@@ -25,24 +26,28 @@ const Page = ({ type }) => {
   } else if (type === "post") {
     return (
       <>
-        <div className="postCard">
+        <div className={`postCard ${className}`}>
           <div className="cardImage">
-            <Link href={"#"}><img
+            <Link href={postURL}><img
               src={
                 "https://portfolio-tailwind.preview.uideck.com/demos/personal/images/news-1.jpg"
               }
             /></Link>
           </div>
-          <Link href={"#"}><div className="title">Startup landing page</div></Link>
+          <Link href={postURL}><div className="title">Startup landing page</div></Link>
           <div className="desc">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas
             vitae dolor ultrices libero.
           </div>
-          <Link href={"#"} className="readMore">Read More</Link>
+          <Link href={postURL} className="readMore">Read More</Link>
         </div>
       </>
     );
   }
 };
+
+Page.defaultProps = {
+  postURL: "/post/",
+}
 
 export default Page;
