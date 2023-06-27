@@ -10,8 +10,8 @@ html {
   scroll-behavior: smooth;
 }
 
-body{
-  @apply bg-blue-50
+body {
+  @apply bg-blue-50;
 }
 
 /* width */
@@ -235,7 +235,7 @@ footer p {
   @apply flex flex-wrap my-4 max-w-[20rem];
 }
 
-.keySkills .chip {
+.chip {
   @apply mx-[0.1rem] border border-slate-300 px-3 py-1 rounded-full text-xs hover:cursor-pointer hover:bg-blue-600 hover:text-white mb-1 hover:border-blue-600 transition-colors;
 }
 
@@ -457,11 +457,67 @@ footer p {
 /* ----------------------- Post Page ----------------------- */
 
 .postSection {
-  @apply  w-full max-w-[1400px] mx-auto;
+  @apply w-full max-w-[1400px] mx-auto;
 }
 
-.postSection .title {
-  @apply text-4xl font-semibold ml-6 text-gray-600
+.postSection > .title {
+  @apply text-4xl font-semibold ml-6 text-blue-900 mt-3;
+}
+
+.postSection .createdAt {
+  @apply text-sm ml-6 text-blue-500 mt-2;
+}
+
+.postTags {
+  @apply ml-6 flex flex-wrap my-3 max-w-full;
+}
+
+.shareIcon {
+  @apply ml-6 mb-6;
+}
+
+.shareIcon .wrapper {
+  @apply flex my-1;
+}
+
+.shareIcon p {
+  @apply text-blue-600;
+}
+
+.shareBtn {
+  @apply mx-1;
+}
+
+.postImage{
+  @apply mx-auto mx-6
+}
+
+.postImage img{
+  @apply w-full
+}
+
+.postContent {
+  @apply text-sm mx-6 mt-2 mb-6;
+}
+
+.relatedPost {
+  @apply mx-6 mb-6;
+}
+
+.relatedPost p {
+  @apply text-base text-blue-600;
+}
+
+.relatedPost .postWrapper {
+  @apply flex flex-wrap justify-start mt-4;
+}
+
+.nxtPrevBtns{
+  @apply w-full flex justify-between px-6 mb-4
+}
+
+.nxtPrevBtns button{
+  @apply flex items-center text-blue-600 hover:text-blue-900
 }
 
 /* ----------------------- Post Page End ----------------------- */
@@ -518,7 +574,7 @@ footer p {
 @media (max-width: 890px) {
   .header nav {
     background: aliceblue !important;
-    @apply h-screen w-screen fixed z-[9999] top-0 left-[-100%] backdrop-blur transition-all duration-300;
+    @apply h-screen w-screen fixed z-[9999] top-0 left-[-110%] backdrop-blur transition-all duration-300;
   }
 
   .header nav.active {
@@ -597,6 +653,12 @@ footer p {
 
   .keySkills {
     @apply mx-auto max-w-[90%];
+  }
+}
+
+@media (max-width: 984px) {
+  .relatedPost .postWrapper{
+    @apply justify-center
   }
 }
 
