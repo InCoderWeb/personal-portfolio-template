@@ -17,4 +17,5 @@ This personal portfolio website is built with Next.js, a React framework known f
 I am thrilled to share my personal portfolio with you and invite you to explore my work, projects, and blog posts. Your feedback and suggestions are invaluable as I continue to refine and enhance my professional presence. Please feel free to browse the repository, explore the code, and contribute if you'd like. Thank you for visiting!
 
 ## Full View of this template
-![image](https://github.com/InCoderWeb/personal-portfolio-template/assets/97720235/f1226a6d-833e-4b7c-9dfd-b4169e374c4b)
+![image](https://github.com/InCoderWeb/personal-portfolio-template/assets/97720235/fb67f73a-1a46-4ebb-a799-6d18edb251e0)
+
