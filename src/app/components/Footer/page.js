@@ -23,7 +23,7 @@ const Page = () => {
   ];
   return (
     <footer className="mt-auto">
-      <h3>Praduman Tiwari</h3>
+      <h3>Jhon Deo</h3>
       <p>
         Lorem ipsum dolor, sit amet consectetur adipisicing elit. Architecto
         debitis possimus porro, provident natus aliquam exercitationem labore
@@ -38,7 +38,7 @@ const Page = () => {
         ))}
       </div>
       <div className="creditSection">
-        All rights reserved by © <Link href="/">pradumantiwari.com</Link> 2023 
+        All rights reserved by © <Link href="/">example.com</Link> 2023 
       </div>
     </footer>
   );

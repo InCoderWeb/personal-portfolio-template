@@ -7,12 +7,12 @@ const Page = () => {
       <div className="homeSection">
         <div className="left">
           <span>Hey There 👋 I am</span>
-          <h3>Praduman Tiwari</h3>
+          <h3>Jhon Deo</h3>
           <h4>
-            Professional <span>MERN Stack/PHP Developer</span>
+            Professional <span>Web Developer</span>
           </h4>
           <p>
-          Experienced MERN stack developer crafting seamless web solutions with expertise in JavaScript, React, Node.js, and MongoDB.
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam animi earum quasi quos eaque deleniti ratione molestiae et quaerat quas?
           </p>
           <div className="actionsButtons">
             <button
@@ -29,7 +29,7 @@ const Page = () => {
           </div>
         </div>
         <div className="right">
-          <img src={"/heroImage.png"} width={400} height={400} />
+          <img src={"https://drive.google.com/uc?id=1DXKOaZJ72G-FG07apoiXRDZXQ9KUNuLp&export=view"} width={450} height={450} />
         </div>
       </div>
     </>

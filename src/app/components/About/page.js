@@ -45,42 +45,29 @@ const keySkils = [
   "Ajax",
   "Javascript",
   "Web Services",
-  "API",
-  "JSON",
-  "CURL",
-  "Facrbook API",
-  "Cron",
-  "Zapier Integration",
-  "Rest API",
-  "Node.JS",
-  "Express",
-  "React.JS",
-  "AJAX",
-  "HTML",
-  "Next.JS",
 ]
 
 const Page = () => {
   const socialIcons = [
     {
       icon: <FaFacebook />,
-      href: "https://www.facebook.com/praduman.k.tiwari",
+      href: "https://www.facebook.com/incoderweb",
     },
     {
       icon: <FaWhatsapp />,
-      href: "https://wa.me/+917828132331",
+      href: "https://wa.me/",
     },
     {
       icon: <FaGithub />,
-      href: "https://github.com/pradumandev",
+      href: "https://github.com/incoderweb",
     },
     {
       icon: <FaLinkedin />,
-      href: "https://www.linkedin.com/in/praduman-tiwari-49910a174/",
+      href: "https://www.linkedin.com/in/incoderweb",
     },
     {
       icon: <FaTwitter />,
-      href: "https://twitter.com/praduman1992",
+      href: "https://twitter.com/incoderweb",
     },
   ];
 
@@ -119,20 +106,10 @@ const Page = () => {
           <div className="right">
             <div className="title">Connect With Me</div>
             <p>
-              Feel free to reach out to me for collaborations, job
-              opportunities, or any inquiries. You can connect with me via email
-              at 
-              <Link href="mailto:pradumantiwari@outlook.com">
-                pradumantiwari@outlook.com
-              </Link>
-              , where I will be happy to discuss your project or answer any
-              questions you may have.
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam esse ab nostrum quidem molestias porro voluptate repudiandae cumque. Dolorum laudantium eos necessitatibus blanditiis nam nobis?
               <br />
               <br />
-              Additionally, you can follow me on social media to stay updated
-              with my latest projects, articles, and insights. Find me on social
-              media platforms for more engaging discussions and to explore my
-              work further. I look forward to connecting with you!
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit voluptates deleniti dicta laborum amet. Quis iure vel velit perferendis sapiente fugit, cumque laudantium? Maxime, ex.
             </p><br/>
             <h3 className="title">Here are some of my tools:</h3>
             <div className="keySkills">

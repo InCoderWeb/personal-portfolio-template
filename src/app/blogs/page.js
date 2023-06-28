@@ -49,7 +49,12 @@ export default function Page() {
       <ScrollToTop />
       <div className="allBlogsSection">
         <div className={`searchBoxWrapper ${focus ? "active" : ""}`}>
-          <div className="searchBox" onClick={() => {searchRef.current.focus()}}>
+          <div
+            className="searchBox"
+            onClick={() => {
+              searchRef.current.focus();
+            }}
+          >
             <FaMagnifyingGlass />
             <input
               type="text"
@@ -99,7 +104,9 @@ export default function Page() {
             <Card type={"post"} className="scale-95" postURL="/post/15792486" />
             <Card type={"post"} className="scale-95" postURL="/post/15792486" />
             <Card type={"post"} className="scale-95" postURL="/post/15792486" />
-            <button className="btn primaryBtn">Load More</button>
+            <div className="wrapper w-full flex justify-center">
+              <button className="btn primaryBtn">Load More</button>
+            </div>
           </div>
         </div>
         {/* <Card type={"post"} /> */}

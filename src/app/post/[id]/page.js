@@ -1,6 +1,7 @@
 "use client";
 import React from "react";
 import Card from "@/app/components/Card/page";
+import ScrollToTop from "@/app/components/ScrollToTop/page";
 import {
   EmailShareButton,
   FacebookShareButton,
@@ -87,6 +88,7 @@ const socialShareOptions = [
 const Page = ({ params }) => {
   return (
     <>
+      <ScrollToTop />
       <div className="postSection">
         <div className="title">This is a sample post title for example.</div>
         <div className="createdAt">01 June 2021</div>
@@ -97,7 +99,10 @@ const Page = ({ params }) => {
           <div className="chip">Tailwind</div>
         </div>
         <div className="postImage">
-          <img src="https://i.pinimg.com/originals/a5/45/38/a54538be5aa14b5af9b6446aa5fd2f7a.jpg" alt="Post Image" />
+          <img
+            src="https://i.pinimg.com/originals/a5/45/38/a54538be5aa14b5af9b6446aa5fd2f7a.jpg"
+            alt="Post Image"
+          />
         </div>
         <div className="postContent">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit,
@@ -175,8 +180,14 @@ const Page = ({ params }) => {
           <hr />
         </div>
         <div className="nxtPrevBtns">
-          <button className="prevBtn"><FaArrowLeft/>&nbsp;Prev Post</button>
-          <button className="nextBtn">Next Post&nbsp;<FaArrowRight/></button>
+          <button className="prevBtn">
+            <FaArrowLeft />
+            &nbsp;Prev Post
+          </button>
+          <button className="nextBtn">
+            Next Post&nbsp;
+            <FaArrowRight />
+          </button>
         </div>
       </div>
     </>
